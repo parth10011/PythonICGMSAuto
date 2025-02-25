@@ -1,4 +1,5 @@
 import unittest
+import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -28,3 +29,18 @@ def ToasterPopupClick():
        
        toaster = wait.until(EC.element_to_be_clickable((By.XPATH, "//div[@role='alert']")))
        toaster.click()
+
+def logOut():
+       
+       Profile = wait.until(EC.element_to_be_clickable((By.XPATH, "//a[@data-toggle='dropdown']")))
+       Profile.click()
+       logout = driver.find_element(By.XPATH , "//a[@style='cursor: pointer;']")
+       logout.click()
+
+       ToasterPopupClick()
+
+       driver.get("https://release-api.icgms.sharajman.com/emailer")
+       time.sleep(2.5)
+    #    if (driver != null):
+              
+    #    driver.quit()

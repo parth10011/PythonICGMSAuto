@@ -50,8 +50,11 @@ ToasterPopupClick()
 
 # Scroll to the end of page
 Scroll_end = driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-time.sleep(3)
 
 # Submit Details
 submit = driver.find_element(By.XPATH, "//span[text()='Submit']")
 # submit.click()
+# ToasterPopupClick()
+time.sleep(1)
+logOut()
+time.sleep(1)
