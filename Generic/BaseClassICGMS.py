@@ -1,3 +1,4 @@
+import random
 import unittest
 import time
 from selenium import webdriver
@@ -39,8 +40,20 @@ def logOut():
 
        ToasterPopupClick()
 
-       driver.get("https://release-api.icgms.sharajman.com/emailer")
+       driver.get(emailer_url)
        time.sleep(2.5)
+
+
+def generate_random_mobile_number():
+    n = ["9", "8", "7", "6"]
+    n1 = random.choice(n)  # Indian mobile number starting with 9, 8, 7, 6
+    mobile_number = [n1] + [str(random.randint(0, 9)) for _ in range(9)]
+    return "".join(mobile_number)
+randomMobileNumber = generate_random_mobile_number()
+randomRepairerNumber = generate_random_mobile_number()
+# Example usage
+print(generate_random_mobile_number())
+
     #    if (driver != null):
               
     #    driver.quit()
