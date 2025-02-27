@@ -10,7 +10,7 @@ Login_ICGMS.login(Cust_Email1 , P2ass)
 ToasterPopupClick()
 
 # Open View Details
-view_details = wait.until(EC.element_to_be_clickable((By.XPATH, "(//button[text()='View Details'])[3]")))
+view_details = wait.until(EC.element_to_be_clickable((By.XPATH, "(//button[text()='View Details'])[1]")))
 view_details.click()
 time.sleep(1)
 
