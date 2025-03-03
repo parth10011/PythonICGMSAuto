@@ -53,11 +53,10 @@ Scroll_end = driver.execute_script("window.scrollTo(0, document.body.scrollHeigh
 time.sleep(1)
 
 # Submit Details
-# submit = driver.find_element(By.XPATH, "//span[text()='Submit']")
+submit = driver.find_element(By.XPATH, "//span[text()='Submit']")
 time.sleep(1)
-# submit.click()
+submit.click()
 
-# ToasterPopupClick()
-time.sleep(1)
+ToasterPopupClick()
 logOut()
 time.sleep(1)

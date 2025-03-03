@@ -78,6 +78,7 @@ def getrandomregnumber():
 
       return stateCode+districtcode+r1+r2+uniqueNumber
 randomCarRegNumber = getrandomregnumber()
+randomPinNumber = random.randint(100000, 999999)
 
 
 Date = datetime.datetime.now()

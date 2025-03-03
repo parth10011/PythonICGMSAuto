@@ -15,13 +15,13 @@ view_details.click()
 time.sleep(1)
 
 # Fill the required details
-wait.until(EC.element_to_be_clickable((By.XPATH, "//input[@placeholder='Enter Date of inward' or @placeholder='Date of inward']"))).send_keys("22122009")
-driver.find_element(By.XPATH, "(//input[@placeholder='dd/mm/yyyy'])[3]").send_keys("22122025")
-driver.find_element(By.XPATH, "//input[@placeholder='Enter Insured Name']").send_keys("Write Your Name Below")
+wait.until(EC.element_to_be_clickable((By.XPATH, "//input[@placeholder='Enter Date of inward' or @placeholder='Date of inward']"))).send_keys(current_date)
+driver.find_element(By.XPATH, "(//input[@placeholder='dd/mm/yyyy'])[3]").send_keys(current_date)
+driver.find_element(By.XPATH, "//input[@placeholder='Enter Insured Name']").send_keys(randomCustomerName)
 driver.find_element(By.XPATH, "//textarea[@placeholder='Enter Address for Communication']").send_keys("Rohtak Road , Banaras")
-driver.find_element(By.XPATH, "//input[@placeholder='Enter Pincode']").send_keys("112213")
+driver.find_element(By.XPATH, "//input[@placeholder='Enter Pincode']").send_keys(randomPinNumber)
 driver.find_element(By.XPATH, "//input[@placeholder='Enter PAN Number']").send_keys("DL986GVK6F")
-driver.find_element(By.XPATH, "(//input[@placeholder='dd/mm/yyyy'])[4]").send_keys("22122022")
+driver.find_element(By.XPATH, "(//input[@placeholder='dd/mm/yyyy'])[4]").send_keys(current_date)
 
 # Choose location on map
 loc = wait.until(EC.element_to_be_clickable((By.XPATH, "//input[@type='address_map']")))
