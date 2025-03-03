@@ -32,20 +32,20 @@ time.sleep(1)
 # // Fill the required details
 driver.find_element(By.XPATH, "//input[contains(@formcontrolname, 'customer_email')]").send_keys(Cust_Email1)
 driver.find_element(By.XPATH, "//input[contains(@formcontrolname, 'customer_mobile_no')]").send_keys(randomMobileNumber)
-driver.find_element(By.XPATH, "//input[contains(@formcontrolname, 'policy_number')]").send_keys("FEB96856544")
+driver.find_element(By.XPATH, "//input[contains(@formcontrolname, 'policy_number')]").send_keys("MAR"+current_date)
 driver.find_element(By.XPATH, "//input[contains(@formcontrolname, 'policy_from')]").send_keys("22012024")
 driver.find_element(By.XPATH, "//input[contains(@formcontrolname, 'policy_to')]").send_keys("29012028")
-driver.find_element(By.XPATH, "//input[contains(@placeholder,'Enter Customer Name')]").send_keys("Autom Pyth")
-driver.find_element(By.XPATH, "//input[contains(@placeholder,'Enter Repairer Name')]").send_keys("Google It")
+driver.find_element(By.XPATH, "//input[contains(@placeholder,'Enter Customer Name')]").send_keys(randomCustomerName)
+driver.find_element(By.XPATH, "//input[contains(@placeholder,'Enter Repairer Name')]").send_keys(randomRepairerName)
 driver.find_element(By.XPATH, "//input[contains(@placeholder,'Enter Make')]").send_keys("Honda")
 driver.find_element(By.XPATH, "//input[contains(@placeholder,'Enter Model')]").send_keys("City")
 driver.find_element(By.XPATH, "//input[contains(@placeholder,'Enter Type')]").send_keys("Sedan")
-driver.find_element(By.XPATH, "//input[contains(@placeholder,'Enter Color')]").send_keys("goole")
+driver.find_element(By.XPATH, "//input[contains(@placeholder,'Enter Color')]").send_keys(randomColorName)
 driver.find_element(By.XPATH, "(//input[contains(@placeholder,'Enter your remark')])[1]").send_keys("Enter Remark 2")
-driver.find_element(By.XPATH, "//input[contains(@placeholder,'Enter Registration Number')]").send_keys("DL08GG8766")
+driver.find_element(By.XPATH, "//input[contains(@placeholder,'Enter Registration Number')]").send_keys(randomCarRegNumber)
 driver.find_element(By.XPATH, "//input[contains(@placeholder,'Enter Repairer Number')]").send_keys(randomRepairerNumber)
 driver.find_element(By.XPATH, "(//input[contains(@placeholder,'Enter your remark')])[2]").send_keys("Enter Remark 1")
-driver.find_element(By.XPATH, "//input[contains(@placeholder,'Enter Year of Mfg')]").send_keys("2021")
+driver.find_element(By.XPATH, "//input[contains(@placeholder,'Enter Year of Mfg')]").send_keys(randomRegYear)
 ToasterPopupClick()
 
 # Scroll to the end of page
@@ -53,7 +53,7 @@ Scroll_end = driver.execute_script("window.scrollTo(0, document.body.scrollHeigh
 time.sleep(1)
 
 # Submit Details
-submit = driver.find_element(By.XPATH, "//span[text()='Submit']")
+# submit = driver.find_element(By.XPATH, "//span[text()='Submit']")
 time.sleep(1)
 # submit.click()
 
