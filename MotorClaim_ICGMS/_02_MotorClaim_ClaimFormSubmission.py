@@ -19,7 +19,7 @@ wait.until(EC.element_to_be_clickable((By.XPATH, "//input[@placeholder='Enter Da
 driver.find_element(By.XPATH, "(//input[@placeholder='dd/mm/yyyy'])[3]").send_keys(current_date)
 driver.find_element(By.XPATH, "//input[@placeholder='Enter Insured Name']").send_keys(randomCustomerName)
 driver.find_element(By.XPATH, "//textarea[@placeholder='Enter Address for Communication']").send_keys("Rohtak Road , Banaras")
-driver.find_element(By.XPATH, "//input[@placeholder='Enter Pincode']").send_keys(randomPinNumber)
+driver.find_element(By.XPATH, "//input[@placeholder='Enter Pincode']").send_keys(random6Number)
 driver.find_element(By.XPATH, "//input[@placeholder='Enter PAN Number']").send_keys("DL986GVK6F")
 driver.find_element(By.XPATH, "(//input[@placeholder='dd/mm/yyyy'])[4]").send_keys(current_date)
 
@@ -47,67 +47,67 @@ time.sleep(1)
 
 # PAN CARD Upload
 PAN_input = driver.find_element(By.XPATH, "(//input[@accept='application/pdf'])[1]")
-PAN_input.send_keys(Doc_Link)
+PAN_input.send_keys(Doc2_Link)
 time.sleep(0.5)
 
 # Aadhar Card Upload
 Aadhar_input = driver.find_element(By.XPATH, "(//input[@accept='application/pdf'])[2]")
-Aadhar_input.send_keys(Doc_Link)
+Aadhar_input.send_keys(Doc2_Link)
 time.sleep(0.5)
 
 # Passport Upload
 Passport_input = driver.find_element(By.XPATH, "(//input[@accept='application/pdf'])[3]")
-Passport_input.send_keys(Doc_Link)
+Passport_input.send_keys(Doc2_Link)
 time.sleep(0.5)
 
 # Voter ID Upload
 Voter_input = driver.find_element(By.XPATH, "(//input[@accept='application/pdf'])[4]")
-Voter_input.send_keys(Doc_Link)
+Voter_input.send_keys(Doc2_Link)
 time.sleep(0.5)
 
 # DL Upload
 DL_input = driver.find_element(By.XPATH, "(//input[@accept='application/pdf'])[5]")
-DL_input.send_keys(Doc_Link)
+DL_input.send_keys(Doc2_Link)
 time.sleep(0.5)
 
 # RC Upload
 RC_input = driver.find_element(By.XPATH, "(//input[@accept='application/pdf'])[6]")
-RC_input.send_keys(Doc_Link)
+RC_input.send_keys(Doc2_Link)
 time.sleep(0.5)
 
 # Insurance Upload
 Insurance_input = driver.find_element(By.XPATH, "(//input[@accept='application/pdf'])[7]")
-Insurance_input.send_keys(Doc_Link)
+Insurance_input.send_keys(Doc2_Link)
 time.sleep(0.5)
 
 # GovID Upload
 GovID_input = driver.find_element(By.XPATH, "(//input[@accept='application/pdf'])[8]")
-GovID_input.send_keys(Doc_Link)
+GovID_input.send_keys(Doc2_Link)
 time.sleep(0.5)
 
 # Other 1 Upload
 Other1_input = driver.find_element(By.XPATH, "(//input[@accept='application/pdf'])[9]")
-Other1_input.send_keys(Doc_Link)
+Other1_input.send_keys(Doc2_Link)
 time.sleep(0.5)
 
 # Other 2 Upload
 Other2_input = driver.find_element(By.XPATH, "(//input[@accept='application/pdf'])[10]")
-Other2_input.send_keys(Doc_Link)
+Other2_input.send_keys(Doc2_Link)
 time.sleep(0.5)
 
 # Repairer Estimation Upload
 Repairer_input = driver.find_element(By.XPATH, "(//input[@accept='application/pdf'])[11]")
-Repairer_input.send_keys(Doc_Link)
+Repairer_input.send_keys(Doc2_Link)
 time.sleep(0.5)
 
 # FIR Upload
 FIR_input = driver.find_element(By.XPATH, "(//input[@accept='application/pdf'])[12]")
-FIR_input.send_keys(Doc_Link)
+FIR_input.send_keys(Doc2_Link)
 time.sleep(0.5)
 
 # Other 3 Upload
 Other3_input = driver.find_element(By.XPATH, "(//input[@accept='application/pdf'])[13]")
-Other3_input.send_keys(Doc_Link)
+Other3_input.send_keys(Doc2_Link)
 time.sleep(1)
 
 # Submit Customer Form
