@@ -20,7 +20,7 @@ wait.until(EC.element_to_be_clickable((By.XPATH, "//a[@href='/claim']"))).click(
 time.sleep(0.5)
 
 # Select Product
-product = Select(driver.find_element(By.XPATH, '//*[@id="main-wrapper"]/div[1]/div/app-claim-intimation/div[1]/div/div/div[2]/div/div/select'))
+product = Select(wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="main-wrapper"]/div[1]/div/app-claim-intimation/div[1]/div/div/div[2]/div/div/select'))))
 product.select_by_visible_text("Motor Claim")
 time.sleep(0.5)
 
@@ -30,9 +30,9 @@ insurer.select_by_visible_text("ROYAL SUNDARAM")
 time.sleep(1)
 
 # // Fill the required details
-driver.find_element(By.XPATH, "//input[contains(@formcontrolname, 'customer_email')]").send_keys(Cust_Email1)
+wait.until(EC.element_to_be_clickable((By.XPATH, "//input[contains(@formcontrolname, 'customer_email')]"))).send_keys(Cust_Email1)
 driver.find_element(By.XPATH, "//input[contains(@formcontrolname, 'customer_mobile_no')]").send_keys(randomMobileNumber)
-driver.find_element(By.XPATH, "//input[contains(@formcontrolname, 'policy_number')]").send_keys("MAR"+current_date)
+driver.find_element(By.XPATH, "//input[contains(@formcontrolname, 'policy_number')]").send_keys("MAR"+random6Number)
 driver.find_element(By.XPATH, "//input[contains(@formcontrolname, 'policy_from')]").send_keys("22012024")
 driver.find_element(By.XPATH, "//input[contains(@formcontrolname, 'policy_to')]").send_keys("29012028")
 driver.find_element(By.XPATH, "//input[contains(@placeholder,'Enter Customer Name')]").send_keys(randomCustomerName)
