@@ -32,6 +32,7 @@ report_upload.send_keys(Est_Report)
 # Enter Remark
 remark = driver.find_element(By.XPATH, "//textarea[@placeholder='Enter Your Remark']")
 remark.send_keys("Ok Go Ahead")
+time.sleep(1)
 
 # Upload Document Files
 doc_upload = driver.find_element(By.XPATH, "(//input[@type='file'])[1]")
