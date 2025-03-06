@@ -6,6 +6,7 @@ url_Local = "http://192.168.32.28:4200/"
 emailer_url = "https://release-api.icgms.sharajman.com/emailer"
 Doc_Link = "C:/Users/parth/OneDrive/Desktop/DTU/Dummy.pdf"
 Doc2_Link = "C:/Users/Parth Grover/Desktop/DTU/Dummy.pdf"
+Est_Report = "C:/Users/Parth Grover/Desktop/DTU/Sharajman Work/New folder (2)/TestNG Report.pdf"
 
 a1dmin = "superadmnphase1@owleyes.ch" ; P2ass= "Admin123"
 
@@ -22,3 +23,4 @@ Cust_Email7 = "customer11@goatmail.uk"
 Cust_Email9 = "pittry583@fuwa.be"
 Cust_Email8 = "bartryfry@macr2.com"
 Cust_Email13 = "chandini.khan@sharajman.com"
+Repairer_Email1 = "repairerphase1@hamham.uk"
