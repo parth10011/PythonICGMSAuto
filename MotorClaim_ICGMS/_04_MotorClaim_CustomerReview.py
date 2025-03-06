@@ -24,10 +24,6 @@ time.sleep(1)
 
 submit_sign = driver.find_element(By.XPATH, "//button[text()='Submit the signature']")
 submit_sign.click()
-time.sleep(1)
-
-close_sign = driver.find_element(By.XPATH, "//button[@aria-label='Close']")
-close_sign.click()
-time.sleep(1)
+time.sleep(2)
 
 logOut()
