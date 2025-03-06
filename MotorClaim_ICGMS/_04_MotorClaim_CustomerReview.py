@@ -21,9 +21,20 @@ approve_button.click()
 canvas = driver.find_element(By.XPATH, "//canvas[@width='700' and @height='200']")
 canvas.click()
 time.sleep(1)
-
 submit_sign = driver.find_element(By.XPATH, "//button[text()='Submit the signature']")
 submit_sign.click()
 time.sleep(2)
+
+# Open Customer Claim List
+wait.until(EC.element_to_be_clickable((By.XPATH, "//a[@href='/customer-claim-list']"))).click()
+
+# Click on Download Inspection Report pdf
+wait.until(EC.element_to_be_clickable((By.XPATH , "(//button[@ngbtooltip='Download Inspection Report'])[1]"))).click()
+ToasterPopupClick()
+time.sleep(1)
+
+# Click on Download Claim Form pdf
+driver.find_element(By.XPATH, "(//button//i[@ngbtooltip='Download Claim Form'])[1]").click()
+ToasterPopupClick()
 
 logOut()
