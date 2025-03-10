@@ -32,7 +32,7 @@ selfReport_radio.click()
 Doc_upload = driver.find_element(By.XPATH, "//input[@accept='application/pdf']")
 Doc_upload.send_keys(Doc2_Link)
 
-# # Enter File Name
+# Enter File Name
 fileName_text = driver.find_element(By.XPATH, "//input[@placeholder='Enter filename']")
 fileName_text.send_keys("d4e5Dummy.a1b2c3pdf")
 

@@ -53,6 +53,7 @@ def generate_random_mobile_number():
     return "".join(mobile_number)
 randomMobileNumber = generate_random_mobile_number()
 randomRepairerNumber = generate_random_mobile_number()
+randomAltNumber = generate_random_mobile_number()
 
 def getrandomname():
 	
@@ -84,6 +85,7 @@ random6Number = str(random.randint(100000, 999999))
 Date = datetime.datetime.now()
 current_year = Date.year
 current_date = Date.strftime("%d%m%Y")
+current_time = Date.strftime("%I%M%p")
 def getRegYear():
       year = str(random.randint(2000 , current_year))
       return year
