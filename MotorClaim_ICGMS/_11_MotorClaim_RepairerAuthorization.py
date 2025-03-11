@@ -1,7 +1,6 @@
 import time
 from Generic.BaseClassICGMS import *
 from Generic.Login_ICGMS import *
-from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.by import By
 
 # Login
@@ -12,26 +11,26 @@ Login_ICGMS.login(Insurer_Email1 , P2ass)
 ToasterPopupClick()
 time.sleep(0.5)
 
-# Click on Surveyor Appointment button
-SurvAppoint_button = wait.until((EC.presence_of_element_located((By.XPATH, "(//button[contains(text(),'Surveyor Appointment')])[1]"))))
-SurvAppoint_button.click()
+# Click on Repairer Authorization button
+repAuth_button = wait.until((EC.presence_of_element_located((By.XPATH, "(//button[contains(text(),'Repairer Authorization')])[1]"))))
+repAuth_button.click()
 time.sleep(1.5)
 
-# Select Surveyor Name Dropdown
-SurvName_dropdown = Select(wait.until((EC.presence_of_element_located((By.XPATH, "//select[@formcontrolname='surveyor_id']")))))
-SurvName_dropdown.select_by_visible_text("Surveyor Phase I Corporation")
-
-# Enter Date Of Visit
-dateVisit_datepick = driver.find_element(By.XPATH, "//input[@type='date']")
-dateVisit_datepick.send_keys(current_date)
-
-# Enter Time Of Visit
-timeVisit_timepick = driver.find_element(By.XPATH, "//input[@type='time']")
-timeVisit_timepick.send_keys(current_time)
+# Enter Pre Approved Amount
+preApprovAmt_text = wait.until((EC.presence_of_element_located((By.XPATH, "//input[@placeholder='Enter Amount']"))))
+preApprovAmt_text.send_keys(random6Number)
 
 # Enter Remark
 remark_text = driver.find_element(By.XPATH, "//textarea[@placeholder='Enter Your Remark']")
-remark_text.send_keys("Surveyor Appointed Successfuly")
+remark_text.send_keys("Repairer Authorization Completed")
+
+# Upload Document File
+document_upload = driver.find_element(By.XPATH, "(//input[@type='file'])[1]")
+document_upload.send_keys(Doc2_Link)
+
+# Enter File Name
+fileName_text = driver.find_element(By.XPATH, "//input[@placeholder='Enter filename']")
+fileName_text.send_keys("giveNameFile")
 
 # View Customer Inspection Report
 ViewCustReport = driver.find_element(By.XPATH, "//button[text()=' View ']")
@@ -48,9 +47,9 @@ DownCustReport.click()
 ToasterPopupClick()
 time.sleep(2)
 
-# Click on Appoint Button
-appoint_button = driver.find_element(By.XPATH, "//span[text()='Appoint']")
-appoint_button.click()
+# Click on Submit Button
+submit_button = driver.find_element(By.XPATH, "//span[text()='Submit']")
+submit_button.click()
 
 # Open Insurer View List
 insurerViewList_button = wait.until((EC.presence_of_element_located((By.XPATH, "//a[@href='/insurer-claim-list']"))))
