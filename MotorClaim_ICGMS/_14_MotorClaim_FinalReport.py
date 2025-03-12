@@ -21,6 +21,21 @@ survClaimList_link.click()
 finalReport_button = wait.until((EC.presence_of_element_located((By.XPATH, "//button[contains(text(),'Final Report')][1]"))))
 finalReport_button.click()
 
+# View Customer Inspection Report
+ViewCustReport = wait.until((EC.visibility_of_element_located((By.XPATH, "//button[text()=' View ']"))))
+ViewCustReport.click()
+ToasterPopupClick()
+
+# Close Customer Inspection Report
+close_button = wait.until((EC.visibility_of_element_located((By.XPATH, "//button[@aria-label='Close']"))))
+close_button.click()
+
+# Download Customer Inspection Report
+DownCustReport = driver.find_element(By.XPATH, "//button[text()=' Download ']")
+DownCustReport.click()
+ToasterPopupClick()
+time.sleep(2)
+
 # Upload Final Report
 finalReport_fileupload = driver.find_element(By.XPATH, "(//input[@type='file'])[1]")
 finalReport_fileupload.send_keys(Est_Report)
@@ -60,21 +75,6 @@ image_fileupload = driver.find_element(By.XPATH, "//input[@accept='image/*']")
 image_fileupload.send_keys(Img_Link)
 ToasterPopupClick()
 time.sleep(1)
-
-# View Customer Inspection Report
-ViewCustReport = wait.until((EC.visibility_of_element_located((By.XPATH, "//button[text()=' View ']"))))
-ViewCustReport.click()
-ToasterPopupClick()
-
-# Close Customer Inspection Report
-close_button = wait.until((EC.visibility_of_element_located((By.XPATH, "//button[@aria-label='Close']"))))
-close_button.click()
-
-# Download Customer Inspection Report
-DownCustReport = driver.find_element(By.XPATH, "//button[text()=' Download ']")
-DownCustReport.click()
-ToasterPopupClick()
-time.sleep(2)
 
 # Click on Submit Button
 submit_button = driver.find_element(By.XPATH, "//span[text()='Submit']")

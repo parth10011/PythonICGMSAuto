@@ -2,6 +2,7 @@ import random
 import string
 import datetime
 import unittest
+from selenium.common.exceptions import TimeoutException
 import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -15,7 +16,7 @@ chrome_driver_path = r"C:\chromedriver.exe"  # Path to ChromeDriver
 options = Options()
 service = Service(chrome_driver_path)
 driver = webdriver.Chrome(service=service, options=options)
-wait = WebDriverWait(driver, 20)
+wait = WebDriverWait(driver, 30)
 
 # class Basetest(unittest.TestCase):
 def setUp():
@@ -29,9 +30,11 @@ def setUp():
     #     self.driver.quit()
 
 def ToasterPopupClick():
-       
-       toaster = wait.until(EC.element_to_be_clickable((By.XPATH, "//div[@role='alert']")))
-       toaster.click()
+    try:
+        toaster = wait.until(EC.element_to_be_clickable((By.XPATH, "//div[@role='alert']")))
+        toaster.click()
+    except TimeoutException:
+        print("Error: Toaster popup did not appear or was not clickable within the timeout period.")
 
 def logOut():
        

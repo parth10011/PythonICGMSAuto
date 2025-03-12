@@ -69,9 +69,10 @@ driver.maximize_window()
 # 
 image_fileupload = driver.find_element(By.XPATH, "//input[@accept='image/*']")
 image_fileupload.send_keys(Img_Link)
+time.sleep(1)
 
 # View Customer Inspection Report
-ViewCustReport = driver.find_element(By.XPATH, "//button[text()=' View ']")
+ViewCustReport = driver.find_element(By.XPATH, "//label[text() = 'Customer Inspection report']/following-sibling::button[contains(text(),'View')]")
 ViewCustReport.click()
 ToasterPopupClick()
 
