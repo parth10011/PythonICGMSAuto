@@ -64,7 +64,8 @@ def getrandomname():
     "Moses", "Angel", "Zaid", "Conner", "Jared", "Jasper", "Larry", "Eugene","Devyn", "Kamden",
     "Armani", "Derick", "Ellis", "Ali", "Camron", "Darrell", "Cortez", "Peter", "Jerome", "Pierre",
     "Sage", "Sheldon", "Hassan", "Kristopher", "Darryl", "Trey", "Russell","Korbin", "Abram", "Anton",
-    "Cason", "Frederick", "Collin", "Aditya", "Aurther", "Kazama", "Ravi","Bikash","Rajat", "Diwakar", "Asim", "Roop"]
+    "Cason", "Frederick", "Collin", "Aditya", "Aurther", "Kazama", "Ravi","Bikash","Rajat", "Diwakar", "Asim", "Roop",
+    "Ashish", "Mahesh"]
 
     return random.choice(names)
 randomCustomerName = getrandomname()
@@ -112,3 +113,18 @@ def getColor():
       Colorname = random.choice(Colornames)
       return Colorname
 randomColorName = getColor()
+
+def getFuelType():
+     fuel = ["PETROL", "DIESEL", "CNG", "ELECTRIC"]
+     return random.choice(fuel)
+randomFuelType = getFuelType()
+
+def getStateName():
+     States = ["Andhra Pradesh","Arunachal Pradesh ","Assam","Bihar","Chhattisgarh","Goa","Gujarat","Haryana",
+               "Himachal Pradesh","Jammu and Kashmir","Jharkhand","Karnataka","Kerala","Ladakh","Madhya Pradesh",
+               "Maharashtra","Manipur","Meghalaya","Mizoram","Nagaland","Odisha","Punjab","Rajasthan",
+               "Sikkim","Tamil Nadu","Telangana","Tripura","Uttar Pradesh","Uttarakhand","West Bengal",
+               "Andaman and Nicobar","Chandigarh","Dadra and Nagar Haveli","Daman and Diu","Lakshadweep",
+               "NCT of Delhi","Puducherry"]
+     return random.choice(States)
+randomStateName = getStateName()
