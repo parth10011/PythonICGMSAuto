@@ -52,9 +52,9 @@ def NEWToasterPopupClick():
 
 def logOut():
        
-       Profile = wait.until(EC.element_to_be_clickable((By.XPATH, "//a[@data-toggle='dropdown']")))
+       Profile = wait.until(EC.presence_of_element_located((By.XPATH, "//a[@data-toggle='dropdown']")))
        Profile.click()
-       logout = driver.find_element(By.XPATH , "//a[@style='cursor: pointer;']")
+       logout = wait.until(EC.presence_of_element_located((By.XPATH, "//a[@style='cursor: pointer;']")))
        logout.click()
 
        ToasterPopupClick()
@@ -142,3 +142,18 @@ def getStateName():
                "NCT of Delhi","Puducherry"]
      return random.choice(States)
 randomStateName = getStateName()
+
+def getRandomEmail():
+    username_length = random.randint(3, 10)
+    username = ''.join(random.choices(string.ascii_letters + string.digits, k=username_length))
+    
+    domain_length = random.randint(3, 10)
+    domain = ''.join(random.choices(string.ascii_lowercase, k=domain_length))
+    
+    tld = random.choice(["com", "net", "org", "io", "xyz"])
+    
+    email = f"{username}@{domain}.{tld}"
+    return email
+randomBasicEmail = getRandomEmail()
+randomContactEmail = getRandomEmail()
+randomUserEmail = getRandomEmail()
