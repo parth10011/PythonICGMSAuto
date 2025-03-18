@@ -32,7 +32,21 @@ def setUp():
 def ToasterPopupClick():
     try:
         toaster = wait.until(EC.element_to_be_clickable((By.XPATH, "//div[@role='alert']")))
+        print(toaster.text)
         toaster.click()
+    except TimeoutException:
+        print("Error: Toaster popup did not appear or was not clickable within the timeout period.")
+
+def NEWToasterPopupClick():
+    try:
+        toaster = wait.until(EC.element_to_be_clickable((By.XPATH, "//div[@role='alert']")))
+
+        message = toaster.text
+
+        print("Message Of TOASTER : "+message)
+
+        toaster.click()
+        
     except TimeoutException:
         print("Error: Toaster popup did not appear or was not clickable within the timeout period.")
 
