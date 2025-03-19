@@ -11,7 +11,9 @@ import keyboard
 # Login
 setUp()
 time.sleep(1)
-Login_ICGMS.login(Cust_Email1 , P2ass)
+User = Cust_Login.cell(2,1).value
+Pass = Cust_Login.cell(2,2).value
+Login_ICGMS.login(User , Pass)
 ToasterPopupClick()
 
 # Open View Details

@@ -10,7 +10,10 @@ from selenium.webdriver.support.ui import Select
 # Login
 setUp()
 time.sleep(1)
-Login_ICGMS.login(a1dmin , P2ass)
+custEmail = Cust_Login.cell(2,1).value
+User = Admin_Login.cell(2,1).value
+Pass = Admin_Login.cell(2,2).value
+Login_ICGMS.login(User , Pass)
 ToasterPopupClick()
 
 # Initiate Claim
@@ -23,12 +26,13 @@ product.select_by_visible_text("Motor Pre Inspection")
 time.sleep(0.5)
 
 # Select Type
+typeName = PreInspection_Type_Name.cell(2,1).value
 type = Select(driver.find_element(By.XPATH, "//label[text()='Type']/following-sibling::div/select"))
-type.select_by_visible_text("Car")
+type.select_by_visible_text(typeName)
 time.sleep(1)
 
-# Fill out the a
-wait.until((EC.presence_of_element_located((By.CSS_SELECTOR, "input[formcontrolname='customer_email']")))).send_keys(Cust_Email1)
+# Fill the required details
+wait.until((EC.presence_of_element_located((By.CSS_SELECTOR, "input[formcontrolname='customer_email']")))).send_keys(custEmail)
 driver.find_element(By.CSS_SELECTOR, "input[formcontrolname='customer_mobile_no']").send_keys(randomMobileNumber)
 driver.find_element(By.XPATH, "//input[@placeholder='Enter Customer Name']").send_keys(randomCustomerName)
 driver.find_element(By.XPATH, "//input[@placeholder='Enter Vehicle Number']").send_keys(randomCarRegNumber)

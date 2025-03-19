@@ -1,4 +1,14 @@
 import random
+import openpyxl
+
+PathExcelSheet = openpyxl.load_workbook("Test Data\ICGMS Test Data.xlsx")
+Admin_Login = PathExcelSheet['SuperAdmin']
+Cust_Login = PathExcelSheet['Customer']
+Repair_Login = PathExcelSheet['Repairer']
+Surveyor_Login = PathExcelSheet['Surveyor']
+Insurer_Login = PathExcelSheet['Insurer_Log']
+MotorClaim_Insurer_Name = PathExcelSheet['MotorClaim_Insurer']
+PreInspection_Type_Name = PathExcelSheet['PreInspection_Type']
 url = "https://release.icgms.sharajman.com/"
 url_UAT = "https://uat.icgms.insapp.in/"
 url_Local = "http://192.168.32.28:4200/"
@@ -11,25 +21,25 @@ Est_Report = "C:/Users/Parth Grover/Desktop/DTU/Sharajman Work/New folder (2)/Te
 Gst_Doc = "C:/Users/Parth Grover/Desktop/DTU/bug-life-cycle.png"
 Pan_Doc = "C:/Users/Parth Grover/Desktop/DTU/ETH Trade.png"
 
-a1dmin = "superadmnphase1@owleyes.ch" ; P2ass= "Admin123"
+# a1dmin = "superadmnphase1@owleyes.ch" ; P2ass= "Admin123"
 
 InsuredName = "CJNICPOSCN"
 latitude = str(random.randint(-90, 90))
 longitude = str(random.randint(-180, 180)) 
-Cust_Email10 = "padnunlow@addrin.uk"
-Cust_Email2 = "eyebuy741@fanclub.pm"
-Cust_Email12 = "testcust1@sendnow.win"
-Cust_Email14 = "chanchlesh.sharma@sharajman.com"
-Cust_Email6 = "errox896@exdonuts.com"
-Cust_Email4 = "hascap814@tapi.re"
-Cust_Email1 = "sumbadlet@eay.jp"
-Cust_Email3 = "fatbeg106@cream.pink"
-Cust_Email5 = "vandayrid@ruru.be"
-Cust_Email11 = "md.jasim@sharajman.com"
-Cust_Email7 = "customer11@goatmail.uk"
-Cust_Email9 = "pittry583@fuwa.be"
-Cust_Email8 = "bartryfry@macr2.com"
-Cust_Email13 = "chandini.khan@sharajman.com"
-Repairer_Email1 = "repairerphase1@hamham.uk"
-Surveyor_Email1 = "surveyorphase1@sendnow.win"
-Insurer_Email1 = "royalsundaram@insurer.com"
+# Cust_Email10 = "padnunlow@addrin.uk"
+# Cust_Email2 = "eyebuy741@fanclub.pm"
+# Cust_Email12 = "testcust1@sendnow.win"
+# Cust_Email14 = "chanchlesh.sharma@sharajman.com"
+# Cust_Email6 = "errox896@exdonuts.com"
+# Cust_Email4 = "hascap814@tapi.re"
+# Cust_Email1 = "sumbadlet@eay.jp"
+# Cust_Email3 = "fatbeg106@cream.pink"
+# Cust_Email5 = "vandayrid@ruru.be"
+# Cust_Email11 = "md.jasim@sharajman.com"
+# Cust_Email7 = "customer11@goatmail.uk"
+# Cust_Email9 = "pittry583@fuwa.be"
+# Cust_Email8 = "bartryfry@macr2.com"
+# Cust_Email13 = "chandini.khan@sharajman.com"
+# Repairer_Email1 = "repairerphase1@hamham.uk"
+# Surveyor_Email1 = "surveyorphase1@sendnow.win"
+# Insurer_Email1 = "royalsundaram@insurer.com"
