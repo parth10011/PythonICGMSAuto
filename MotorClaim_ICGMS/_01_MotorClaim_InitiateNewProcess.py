@@ -12,7 +12,10 @@ from selenium.webdriver.support.ui import Select
 # Login
 setUp()
 time.sleep(1)
-Login_ICGMS.login(a1dmin , P2ass)
+custEmail = Cust_Login.cell(2,1).value
+User = Admin_Login.cell(2,1).value
+Pass = Admin_Login.cell(2,2).value
+Login_ICGMS.login(User , Pass)
 ToasterPopupClick()
 
 # Initiate Claim
@@ -25,12 +28,13 @@ product.select_by_visible_text("Motor Claim")
 time.sleep(0.5)
 
 # Select Insurer
+insurerName = MotorClaim_Insurer_Name.cell(2,1).value
 insurer = Select(driver.find_element(By.XPATH, '//*[@id="main-wrapper"]/div[1]/div/app-claim-intimation/div[1]/div/div/div[3]/div/div/select'))
-insurer.select_by_visible_text("ROYAL SUNDARAM")
+insurer.select_by_visible_text(insurerName)
 time.sleep(1)
 
 # // Fill the required details
-wait.until(EC.element_to_be_clickable((By.XPATH, "//input[contains(@formcontrolname, 'customer_email')]"))).send_keys(Cust_Email1)
+wait.until(EC.element_to_be_clickable((By.XPATH, "//input[contains(@formcontrolname, 'customer_email')]"))).send_keys(custEmail)
 driver.find_element(By.XPATH, "//input[contains(@formcontrolname, 'customer_mobile_no')]").send_keys(randomMobileNumber)
 driver.find_element(By.XPATH, "//input[contains(@formcontrolname, 'policy_number')]").send_keys("MAR"+random6Number)
 driver.find_element(By.XPATH, "//input[contains(@formcontrolname, 'policy_from')]").send_keys("22012024")

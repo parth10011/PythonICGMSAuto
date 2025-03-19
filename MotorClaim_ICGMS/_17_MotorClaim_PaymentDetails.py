@@ -8,7 +8,9 @@ import random
 # Login
 setUp()
 time.sleep(1)
-Login_ICGMS.login(Insurer_Email1 , P2ass)
+User = Insurer_Login.cell(2,1).value
+Pass = Insurer_Login.cell(2,2).value
+Login_ICGMS.login(User , Pass)
 
 ToasterPopupClick()
 time.sleep(0.5)

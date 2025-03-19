@@ -6,7 +6,9 @@ from selenium.webdriver.common.by import By
 # Login
 setUp()
 time.sleep(1)
-Login_ICGMS.login(Surveyor_Email1 , P2ass)
+User = Surveyor_Login.cell(2,1).value
+Pass = Surveyor_Login.cell(2,2).value
+Login_ICGMS.login(User , Pass)
 
 ToasterPopupClick()
 time.sleep(0.5)

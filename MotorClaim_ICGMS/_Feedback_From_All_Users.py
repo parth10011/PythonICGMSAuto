@@ -7,7 +7,9 @@ def MotorClaim_FeedBackFromCustomer():
     # Login
     setUp()
     time.sleep(1)
-    Login_ICGMS.login(Cust_Email1 , P2ass)
+    User = Cust_Login.cell(2,1).value
+    Pass = Cust_Login.cell(2,2).value
+    Login_ICGMS.login(User , Pass)
     ToasterPopupClick()
 
     # Click on Give Feedback button
@@ -41,7 +43,9 @@ def MotorClaim_FeedbackFromInsurer():
     # Login
     setUp()
     time.sleep(1)
-    Login_ICGMS.login(Insurer_Email1 , P2ass)
+    User = Insurer_Login.cell(2,1).value
+    Pass = Insurer_Login.cell(2,2).value
+    Login_ICGMS.login(User , Pass)
 
     ToasterPopupClick()
     time.sleep(0.5)
@@ -74,7 +78,9 @@ MotorClaim_FeedbackFromInsurer()
 def MotorClaim_FeedbackFromRepairer():
     setUp()
     time.sleep(1)
-    Login_ICGMS.login(Repairer_Email1 , P2ass)
+    User = Repair_Login.cell(2,1).value
+    Pass = Repair_Login.cell(2,2).value
+    Login_ICGMS.login(User , Pass)
 
     ToasterPopupClick()
     time.sleep(0.5)
@@ -111,7 +117,9 @@ MotorClaim_FeedbackFromRepairer()
 def MotorClaim_FeedbackFromSurveyor():
     setUp()
     time.sleep(1)
-    Login_ICGMS.login(Surveyor_Email1 , P2ass)
+    User = Surveyor_Login.cell(2,1).value
+    Pass = Surveyor_Login.cell(2,2).value
+    Login_ICGMS.login(User , Pass)
 
     ToasterPopupClick()
     time.sleep(0.5)
@@ -149,7 +157,9 @@ MotorClaim_FeedbackFromSurveyor()
 def MotorClaim_FinalCompletionFeedback():
     setUp()
     time.sleep(1)
-    Login_ICGMS.login(a1dmin , P2ass)
+    User = Admin_Login.cell(2,1).value
+    Pass = Admin_Login.cell(2,2).value
+    Login_ICGMS.login(User , Pass)
     ToasterPopupClick()
 
     # Open View List
@@ -163,6 +173,8 @@ def MotorClaim_FinalCompletionFeedback():
     # Complete Claim Button Click
     completeClaim_button = wait.until((EC.presence_of_element_located((By.XPATH, "(//button[text()='Complete Claim'])[1]"))))
     completeClaim_button.click()
+    time.sleep(1)
+    ToasterPopupClick()
     logOut()
 
 MotorClaim_FinalCompletionFeedback()

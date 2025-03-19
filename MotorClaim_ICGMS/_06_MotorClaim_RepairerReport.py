@@ -6,7 +6,9 @@ from selenium.webdriver.common.by import By
 # Login
 setUp()
 time.sleep(1)
-Login_ICGMS.login(Repairer_Email1 , P2ass)
+User = Repair_Login.cell(2,1).value
+Pass = Repair_Login.cell(2,2).value
+Login_ICGMS.login(User , Pass)
 ToasterPopupClick()
 
 # Open View List
