@@ -13,14 +13,14 @@ Login_ICGMS.login(User , Pass)
 ToasterPopupClick()
 
 # Open View Details
-view_details = wait.until(EC.element_to_be_clickable((By.XPATH, "(//button[text()='View Details'])[1]")))
+view_details = wait.until(EC.element_to_be_clickable((By.XPATH, "(//td[text() = 'Motor Claim']/following-sibling::td/button[text() = 'View Details'])[1]")))
 view_details.click()
 time.sleep(1)
 
 # Fill the required details
 wait.until(EC.element_to_be_clickable((By.XPATH, "//input[@placeholder='Enter Date of inward' or @placeholder='Date of inward']"))).send_keys(current_date)
 driver.find_element(By.XPATH, "(//input[@placeholder='dd/mm/yyyy'])[3]").send_keys(current_date)
-driver.find_element(By.XPATH, "//input[@placeholder='Enter Insured Name']").send_keys(randomCustomerName)
+driver.find_element(By.XPATH, "//input[@placeholder='Enter Insured Name']").send_keys(getrandomname())
 driver.find_element(By.XPATH, "//textarea[@placeholder='Enter Address for Communication']").send_keys("Rohtak Road , Banaras")
 driver.find_element(By.XPATH, "//input[@placeholder='Enter Pincode']").send_keys(random6Number)
 driver.find_element(By.XPATH, "//input[@placeholder='Enter PAN Number']").send_keys("DL986GVK6F")

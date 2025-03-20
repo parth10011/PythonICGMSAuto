@@ -29,12 +29,13 @@ time.sleep(0.5)
 typeName = PreInspection_Type_Name.cell(2,1).value
 type = Select(driver.find_element(By.XPATH, "//label[text()='Type']/following-sibling::div/select"))
 type.select_by_visible_text(typeName)
+print(typeName)
 time.sleep(1)
 
 # Fill the required details
 wait.until((EC.presence_of_element_located((By.CSS_SELECTOR, "input[formcontrolname='customer_email']")))).send_keys(custEmail)
 driver.find_element(By.CSS_SELECTOR, "input[formcontrolname='customer_mobile_no']").send_keys(randomMobileNumber)
-driver.find_element(By.XPATH, "//input[@placeholder='Enter Customer Name']").send_keys(randomCustomerName)
+driver.find_element(By.XPATH, "//input[contains(@placeholder,'Enter Customer Name')]").send_keys(randomCustomerName)
 driver.find_element(By.XPATH, "//input[@placeholder='Enter Vehicle Number']").send_keys(randomCarRegNumber)
 driver.find_element(By.XPATH, "//input[@placeholder='Enter State']").send_keys(randomStateName)
 driver.find_element(By.XPATH, "//input[@placeholder='Enter year of mfg']").send_keys(randomRegYear)
@@ -56,9 +57,10 @@ time.sleep(1)
 # Submit Details
 submit = driver.find_element(By.XPATH, "//span[text()='Submit']")
 submit.click()
+ToasterPopupClick()
+time.sleep(1)
 
 # Open View List
 viewList_button = driver.find_element(By.XPATH, "//span[contains(text(),'View List')]")
 viewList_button.click()
-ToasterPopupClick()
 logOut()

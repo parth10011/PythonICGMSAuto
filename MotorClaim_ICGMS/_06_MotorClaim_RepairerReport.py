@@ -21,7 +21,7 @@ report_button.click()
 
 # Enter Amount for repair
 amt_rep = wait.until(EC.element_to_be_clickable((By.XPATH, "//input[@placeholder='Enter Amount']")))
-amt_rep.send_keys("6433")
+amt_rep.send_keys(random6Number)
 
 # Enter Days for repair
 days_rep = driver.find_element(By.XPATH, "//input[@placeholder='Enter Required number of days']")

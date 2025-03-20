@@ -173,8 +173,8 @@ def MotorClaim_FinalCompletionFeedback():
     # Complete Claim Button Click
     completeClaim_button = wait.until((EC.presence_of_element_located((By.XPATH, "(//button[text()='Complete Claim'])[1]"))))
     completeClaim_button.click()
-    time.sleep(1)
-    ToasterPopupClick()
+    time.sleep(3)
+
     logOut()
 
 MotorClaim_FinalCompletionFeedback()
