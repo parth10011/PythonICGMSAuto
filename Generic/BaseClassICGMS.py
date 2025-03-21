@@ -1,3 +1,6 @@
+import sys ; import os
+# Add the parent directory (the root folder) to the Python path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import random
 import string
 import datetime

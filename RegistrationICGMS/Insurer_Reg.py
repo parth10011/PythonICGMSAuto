@@ -17,12 +17,12 @@ ToasterPopupClick()
 
 # Click On Registration
 wait.until((EC.presence_of_element_located((By.XPATH, "//span[text()='Registration ']")))).click()
+# Click on Insurer
+driver.find_element(By.PARTIAL_LINK_TEXT, "Insurer").click()
+time.sleep(0.5)
 
 # Insurer Basic Details Fill
 def BasicDetails_Input():
-    # Click on Insurer
-    driver.find_element(By.PARTIAL_LINK_TEXT, "Insurer").click()
-    time.sleep(0.5)
 
     # Click on Add New Insurer
     driver.find_element(By.CSS_SELECTOR, "button[ngbtooltip='Add New']").click()
