@@ -28,8 +28,7 @@ def test_MotorClaim_ClaimFinancAlloc():
     driver.find_element(By.XPATH, "//input[@formcontrolname='is_financier_required' and @value='yes']").click()
 
     financType_dropdown = Select(driver.find_element(By.XPATH, "//select[@formcontrolname='financier_id']"))
-    # financType_dropdown.select_by_visible_text("Parth Corporation")
-    financType_dropdown.select_by_visible_text("vanshita")
+    financType_dropdown.select_by_visible_text("Parth Corporation")
 
     # Upload Document File
     document_upload = driver.find_element(By.XPATH, "(//input[@type='file'])[1]")

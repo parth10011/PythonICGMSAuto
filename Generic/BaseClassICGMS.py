@@ -27,20 +27,12 @@ def setUp():
         """Set up the browser before each test."""
         driver.maximize_window()
         driver.get(url)
-        try:
-             driver.find_element(By.ID, "details-button").click()
-             driver.find_element(By.ID, "proceed-link").click()
-        except TimeoutException:
-             pass
-        except Exception:
-             pass
 
     # def tearDown(self):
     #     """Quit the browser after each test."""
     #     self.driver.quit()
 
 def ToasterPopupClick():
-    wait = WebDriverWait(driver, 20)
     try:
         toaster = wait.until(EC.element_to_be_clickable((By.XPATH, "//div[@role='alert']")))
         print(toaster.text)
@@ -106,8 +98,8 @@ def getrandomregnumber():
       r2 = random.choice(string.ascii_uppercase)
       uniqueNumber = str(random.randint(1000,9999))
 
-      return stateCode+districtcode+r1+r2+uniqueNumber , stateCode
-randomCarRegNumber, randomstateCode = getrandomregnumber()
+      return stateCode+districtcode+r1+r2+uniqueNumber
+randomCarRegNumber = getrandomregnumber()
 random6Number = str(random.randint(100000, 999999))
 
 

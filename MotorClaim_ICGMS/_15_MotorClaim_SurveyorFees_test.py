@@ -60,9 +60,9 @@ def test_MotorClaim_SurvFee():
     # Click on Submit Button
     submit_button = driver.find_element(By.XPATH, "//span[text()='Submit']")
     submit_button.click()
-    ToasterPopupClick()
 
     # Open Surveyor Claim View List
     survClaimList_link = wait.until((EC.presence_of_element_located((By.XPATH, "//a[@href='/surveyor-claim-list']"))))
     survClaimList_link.click()
+    ToasterPopupClick()
     logOut()
