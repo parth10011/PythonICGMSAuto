@@ -21,7 +21,7 @@ def test_MotorClaim_RepairAppoint():
     # Select Repairer Type
     repair_type = Select(wait.until(EC.element_to_be_clickable((By.XPATH, '//select[@formcontrolname="repairer_id"]'))))
     repair_type.select_by_visible_text("Parth Repair Corporation")
-    # select_repairer.select_by_visible_text("Ehtasham")
+    # repair_type.select_by_visible_text("Ehtasham")
     time.sleep(1)
 
     # Enter Remark
@@ -31,7 +31,7 @@ def test_MotorClaim_RepairAppoint():
     # Click Appoint
     appoint = driver.find_element(By.XPATH, "//button[@type='submit']")
     appoint.click()
+    time.sleep(2)
 
     ToasterPopupClick()
     logOut()
-    # time.sleep(10)
