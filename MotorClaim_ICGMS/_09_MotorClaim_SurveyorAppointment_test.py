@@ -22,7 +22,8 @@ def test_MotorClaim_SurvAppoint():
 
     # Select Surveyor Name Dropdown
     SurvName_dropdown = Select(wait.until((EC.presence_of_element_located((By.XPATH, "//select[@formcontrolname='surveyor_id']")))))
-    SurvName_dropdown.select_by_visible_text("Surveyor Phase I Corporation")
+    # SurvName_dropdown.select_by_visible_text("Surveyor Phase I Corporation")
+    SurvName_dropdown.select_by_visible_text("Ehtasham Husain")
 
     # Enter Date Of Visit
     dateVisit_datepick = driver.find_element(By.XPATH, "//input[@type='date']")
@@ -60,3 +61,5 @@ def test_MotorClaim_SurvAppoint():
     insurerViewList_button.click()
     ToasterPopupClick()
     logOut()
+
+# test_MotorClaim_SurvAppoint()
