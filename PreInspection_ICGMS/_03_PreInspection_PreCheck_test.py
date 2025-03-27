@@ -21,7 +21,7 @@ def test_PreInsp_PreCheck():
     time.sleep(0.5)
 
     # Pre Check button Click
-    preCheck_Button = wait.until((EC.presence_of_element_located((By.XPATH, "(//button[text()='Pre Check'])[1]"))))
+    preCheck_Button = wait.until(EC.presence_of_element_located((By.XPATH, "(//tr[td[text()='Motor Pre Inspection'] and td/span[text()='Customer update']]//button[contains(text(),'Pre Check')])[1]")))
     preCheck_Button.click()
 
     # Giving time to load the page

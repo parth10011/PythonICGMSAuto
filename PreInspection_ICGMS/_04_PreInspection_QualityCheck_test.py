@@ -23,7 +23,7 @@ def test_PreInsp_QC():
     time.sleep(0.5)
 
     # Quality Check button Click
-    qualityCheck_Button = wait.until((EC.presence_of_element_located((By.XPATH, "(//button[text()='Quality Check'])[1]"))))
+    qualityCheck_Button = wait.until(EC.presence_of_element_located((By.XPATH, "(//tr[td[text()='Motor Pre Inspection'] and td/span[text()='Pre-Check Verified']]//button[contains(text(),'Quality Check')])[1]")))
     qualityCheck_Button.click()
 
     # Locate And Reach Enter Details Column
