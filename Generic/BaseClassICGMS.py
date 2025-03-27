@@ -97,6 +97,9 @@ def getrandomregnumber():
 randomCarRegNumber, randomstateCode = getrandomregnumber()
 random6Number = str(random.randint(100000, 999999))
 
+def getrandom6digit():
+     return str(random.randint(100000, 999999))
+
 
 Date = datetime.datetime.now()
 current_year = Date.year
@@ -155,3 +158,7 @@ def getRandomEmail():
 randomBasicEmail = getRandomEmail()
 randomContactEmail = getRandomEmail()
 randomUserEmail = getRandomEmail()
+
+def getrandomImage():
+     image = os.path.join(folder, random.choice(files))
+     return image
