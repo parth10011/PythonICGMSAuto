@@ -17,7 +17,7 @@ def test_MotorClaim_QaulityCheck():
     view_list.click()
 
     # Quality Check Button click
-    quality_button = wait.until(EC.element_to_be_clickable((By.XPATH, "(//button[text()='Quality Check'])[1]")))
+    quality_button = wait.until(EC.element_to_be_clickable((By.XPATH, "(//button[text()=' Quality Check' or text()='Quality Check'])[1]")))
     quality_button.click()
     time.sleep(1)
 

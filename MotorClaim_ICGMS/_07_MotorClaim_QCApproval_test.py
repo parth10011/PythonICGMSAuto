@@ -18,7 +18,7 @@ def test_MotorClaim_QC():
     driver.find_element(By.XPATH, "//a[@href='/claim-details']").click()
 
     # Click On QC Approval Button
-    wait.until(EC.element_to_be_clickable((By.XPATH, "(//button[text()='QC Approval'])[1]"))).click()
+    wait.until(EC.element_to_be_clickable((By.XPATH, "(//button[text()=' QC Approval' or text()='QC Approval'])[1]"))).click()
     time.sleep(0.5)
 
     # Enter Remark

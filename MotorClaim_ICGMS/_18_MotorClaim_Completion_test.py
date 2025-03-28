@@ -17,7 +17,7 @@ def test_MotorClaim_Complete():
     view_list.click()
 
     # Completion Button Click
-    complete_button = wait.until(EC.element_to_be_clickable((By.XPATH, "(//button[text()='Completion'])[1]")))
+    complete_button = wait.until(EC.element_to_be_clickable((By.XPATH, "(//button[text()=' Completion' or text()='Completion'])[1]")))
     complete_button.click()
 
     # Enter Date of Delivery of vehicle
