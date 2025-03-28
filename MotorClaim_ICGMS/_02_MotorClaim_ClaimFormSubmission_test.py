@@ -14,7 +14,7 @@ def test_MotorClaim_ClaimFormSubmission():
     ToasterPopupClick()
 
     # Open View Details
-    view_details = wait.until(EC.element_to_be_clickable((By.XPATH, "(//td[text() = 'Motor Claim']/following-sibling::td/button[text() = 'View Details'])[1]")))
+    view_details = wait.until(EC.element_to_be_clickable((By.XPATH, "(//tr[td[text()='Motor Claim'] and td/span[text()='Claim Initiated']]//button[contains(text(), 'View Details')])[1]")))
     view_details.click()
     time.sleep(1)
 
@@ -62,59 +62,59 @@ def test_MotorClaim_ClaimFormSubmission():
     driver.maximize_window()
 
     Front_View_Input = driver.find_element(By.XPATH, "//input[@id='front_view_selfie']")
-    Front_View_Input.send_keys(Img_Link)
+    Front_View_Input.send_keys(getrandomImage())
 
     # Upload Chassis Number Image
     Chassis_Number_Input = driver.find_element(By.XPATH, "//input[@id='chassis_number']")
-    Chassis_Number_Input.send_keys(Img_Link)
+    Chassis_Number_Input.send_keys(getrandomImage())
 
     # Upload Odometer Number Image
     Odometer_Number_Input = driver.find_element(By.XPATH, "//input[@id='odometer_reading']")
-    Odometer_Number_Input.send_keys(Img_Link)
+    Odometer_Number_Input.send_keys(getrandomImage())
 
     # Upload Front Rh View Image
     Front_Rh_View_Input = driver.find_element(By.XPATH, "//input[@id='front_rh_view']")
-    Front_Rh_View_Input.send_keys(Img_Link)
+    Front_Rh_View_Input.send_keys(getrandomImage())
 
     # Upload Front Lh View Image
     Front_Lh_View_Input = driver.find_element(By.XPATH, "//input[@id='front_lh_view']")
-    Front_Lh_View_Input.send_keys(Img_Link)
+    Front_Lh_View_Input.send_keys(getrandomImage())
 
     # Upload Rear View Image
     Rear_View_Input = driver.find_element(By.XPATH, "//input[@id='rear_view']")
-    Rear_View_Input.send_keys(Img_Link)
+    Rear_View_Input.send_keys(getrandomImage())
 
     # Upload Rear Lh View Image
     Rear_Lh_View_Input = driver.find_element(By.XPATH, "//input[@id='rear_lh_view']")
-    Rear_Lh_View_Input.send_keys(Img_Link)
+    Rear_Lh_View_Input.send_keys(getrandomImage())
 
     # Upload Rear Rh View Image
     Rear_Rh_View_Input = driver.find_element(By.XPATH, "//input[@id='rear_rh_view']")
-    Rear_Rh_View_Input.send_keys(Img_Link)
+    Rear_Rh_View_Input.send_keys(getrandomImage())
 
     # Upload RC Copy Image
     RC_Copy_Input = driver.find_element(By.XPATH, "//input[@id='rc_copy']")
-    RC_Copy_Input.send_keys(Img_Link)
+    RC_Copy_Input.send_keys(getrandomImage())
 
     # Upload Front Windscreen Inside Image
     Front_Windscreen_Inside_Input = driver.find_element(By.XPATH, "//input[@id='front_windscreen_inside']")
-    Front_Windscreen_Inside_Input.send_keys(Img_Link)
+    Front_Windscreen_Inside_Input.send_keys(getrandomImage())
 
     # Upload Engine Compartment Image
     Engine_Compartment_Input = driver.find_element(By.XPATH, "//input[@id='engine_compartment_photo']")
-    Engine_Compartment_Input.send_keys(Img_Link)
+    Engine_Compartment_Input.send_keys(getrandomImage())
 
     # Upload Front Windscreen Outside Image
     Front_Windscreen_Outside_Input = driver.find_element(By.XPATH, "//input[@id='front_windscreen_outside']")
-    Front_Windscreen_Outside_Input.send_keys(Img_Link)
+    Front_Windscreen_Outside_Input.send_keys(getrandomImage())
 
     # Upload Dashboard Image
     Dashboard_Input = driver.find_element(By.XPATH, "//input[@id='dashboard']")
-    Dashboard_Input.send_keys(Img_Link)
+    Dashboard_Input.send_keys(getrandomImage())
 
     # Upload Under Chassis Image
     Under_Chassis_Input = driver.find_element(By.XPATH, "//input[@id='under_chassis']")
-    Under_Chassis_Input.send_keys(Img_Link)
+    Under_Chassis_Input.send_keys(getrandomImage())
 
     # Upload Walkaround Video
     Video_Input = driver.find_element(By.XPATH, "//input[@id='walkaround_video']")
@@ -178,8 +178,6 @@ def test_MotorClaim_ClaimFormSubmission():
     submit = driver.find_element(By.XPATH, "(//button[@type='submit'])[1]")
     submit.click()
     time.sleep(5)
-    # time.sleep(10)
-
     ToasterPopupClick()
 
     logOut()

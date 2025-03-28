@@ -25,7 +25,7 @@ def test_MotorClaim_Initiate():
     # Select Product
     product = Select(wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="main-wrapper"]/div[1]/div/app-claim-intimation/div[1]/div/div/div[2]/div/div/select'))))
     product.select_by_visible_text("Motor Claim")
-    time.sleep(0.5)
+    time.sleep(1)
 
     # Select Insurer
     insurerName = MotorClaim_Insurer_Name.cell(2,1).value

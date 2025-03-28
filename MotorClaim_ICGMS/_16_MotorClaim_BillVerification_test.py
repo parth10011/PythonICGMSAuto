@@ -26,6 +26,7 @@ def test_MotorClaim_BillVerif():
     viewInspecReport_button = wait.until((EC.presence_of_element_located((By.XPATH, "(//button[text()='View'])[1]"))))
     viewInspecReport_button.click()
     ToasterPopupClick()
+    time.sleep(1)
 
     # Close Inspection Report
     close_button = driver.find_element(By.XPATH, "//button[@aria-label='Close']")

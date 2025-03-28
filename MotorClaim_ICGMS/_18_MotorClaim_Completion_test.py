@@ -27,6 +27,7 @@ def test_MotorClaim_Complete():
     # Select Process Completed radio button (either yes or no)
     processComplete_radio = driver.find_elements(By.XPATH, "//input[@value='yes'] | //input[@value='no']")
     random.choice(processComplete_radio).click()
+    time.sleep(1)
 
     # Click on Submit Button
     submit_button = driver.find_element(By.XPATH, "//span[text()='Submit']")
