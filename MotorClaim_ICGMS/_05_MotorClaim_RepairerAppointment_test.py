@@ -19,9 +19,10 @@ def test_MotorClaim_RepairAppoint():
     time.sleep(1)
 
     # Select Repairer Type
+    RepName = Repair_Login.cell(2,3).value
+    wait.until(EC.presence_of_all_elements_located((By.XPATH, "//select[@formcontrolname='repairer_id']/option")))
     repair_type = Select(wait.until(EC.element_to_be_clickable((By.XPATH, '//select[@formcontrolname="repairer_id"]'))))
-    repair_type.select_by_visible_text("Parth Repair Corporation")
-    # repair_type.select_by_visible_text("Ehtasham")
+    repair_type.select_by_visible_text(RepName)
     time.sleep(1)
 
     # Enter Remark

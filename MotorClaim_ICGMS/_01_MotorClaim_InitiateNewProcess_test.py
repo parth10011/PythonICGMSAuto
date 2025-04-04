@@ -28,10 +28,10 @@ def test_MotorClaim_Initiate():
     time.sleep(1)
 
     # Select Insurer
-    insurerName = MotorClaim_Insurer_Name.cell(2,1).value
     insurer = Select(driver.find_element(By.XPATH, '//*[@id="main-wrapper"]/div[1]/div/app-claim-intimation/div[1]/div/div/div[3]/div/div/select'))
     insurer.select_by_visible_text(insurerName)
     time.sleep(1)
+
 
     # // Fill the required details
     wait.until(EC.element_to_be_clickable((By.XPATH, "//input[contains(@formcontrolname, 'customer_email')]"))).send_keys(custEmail)

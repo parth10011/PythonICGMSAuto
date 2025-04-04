@@ -18,12 +18,13 @@ def test_MotorClaim_SurvAppoint():
     # Click on Surveyor Appointment button
     SurvAppoint_button = wait.until((EC.presence_of_element_located((By.XPATH, "(//button[contains(text(),'Surveyor Appointment')])[1]"))))
     SurvAppoint_button.click()
-    time.sleep(1.5)
+    time.sleep(2)
 
     # Select Surveyor Name Dropdown
+    surveyorName = Surveyor_Login.cell(2,3).value
+    wait.until(EC.presence_of_all_elements_located((By.XPATH, "//select[@formcontrolname='surveyor_id']/option")))
     SurvName_dropdown = Select(wait.until((EC.presence_of_element_located((By.XPATH, "//select[@formcontrolname='surveyor_id']")))))
-    SurvName_dropdown.select_by_visible_text("Surveyor Phase I Corporation")
-    # SurvName_dropdown.select_by_visible_text("Ehtasham Husain")
+    SurvName_dropdown.select_by_visible_text(surveyorName)
 
     # Enter Date Of Visit
     dateVisit_datepick = driver.find_element(By.XPATH, "//input[@type='date']")
