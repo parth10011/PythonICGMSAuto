@@ -19,7 +19,10 @@ ToasterPopupClick()
 wait.until((EC.presence_of_element_located((By.XPATH, "//span[text()='Registration ']")))).click()
 
 # Click on Claim Financier
-driver.find_element(By.PARTIAL_LINK_TEXT, "Claim Financer").click()
+try:
+    driver.find_element(By.PARTIAL_LINK_TEXT, "Claim Financer").click()
+except:
+    driver.find_element(By.PARTIAL_LINK_TEXT, "Claim Financier").click()
 time.sleep(0.5)
 
 def ClaimFinanc_BasicDetails_Input():
@@ -118,7 +121,10 @@ def ClaimFinanc_BasicDetails_Input():
     ToasterPopupClick()
 
     # Click on Claim Financier
-    driver.find_element(By.PARTIAL_LINK_TEXT, "Claim Financer").click()
+    try:
+        driver.find_element(By.PARTIAL_LINK_TEXT, "Claim Financer").click()
+    except:
+        driver.find_element(By.PARTIAL_LINK_TEXT, "Claim Financier").click()
     time.sleep(0.5)
 
 ClaimFinanc_BasicDetails_Input()
@@ -183,7 +189,10 @@ def ClaimFinanc_BranchDetails_Input():
     ToasterPopupClick()
 
     # Click on Claim Financier
-    driver.find_element(By.PARTIAL_LINK_TEXT, "Claim Financer").click()
+    try:
+        driver.find_element(By.PARTIAL_LINK_TEXT, "Claim Financer").click()
+    except:
+        driver.find_element(By.PARTIAL_LINK_TEXT, "Claim Financier").click()
     time.sleep(0.5)
 
 
@@ -245,7 +254,10 @@ def ClaimFinanc_ContactDetails_Input():
     ToasterPopupClick()
 
     # Click on Claim Financier
-    driver.find_element(By.PARTIAL_LINK_TEXT, "Claim Financer").click()
+    try:
+        driver.find_element(By.PARTIAL_LINK_TEXT, "Claim Financer").click()
+    except:
+        driver.find_element(By.PARTIAL_LINK_TEXT, "Claim Financier").click()
     time.sleep(0.5)
 
 
@@ -310,7 +322,10 @@ def ClaimFinanc_UserDetails_Input():
     ToasterPopupClick()
 
     # Click on Claim Financier
-    driver.find_element(By.PARTIAL_LINK_TEXT, "Claim Financer").click()
+    try:
+        driver.find_element(By.PARTIAL_LINK_TEXT, "Claim Financer").click()
+    except:
+        driver.find_element(By.PARTIAL_LINK_TEXT, "Claim Financier").click()
     logOut()
 
 ClaimFinanc_UserDetails_Input()
