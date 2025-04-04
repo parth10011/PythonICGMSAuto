@@ -53,9 +53,9 @@ def test_MotorClaim_RepairAuth():
     # Click on Submit Button
     submit_button = driver.find_element(By.XPATH, "//span[text()='Submit']")
     submit_button.click()
+    ToasterPopupClick()
 
     # Open Insurer View List
     insurerViewList_button = wait.until((EC.presence_of_element_located((By.XPATH, "//a[@href='/insurer-claim-list']"))))
     insurerViewList_button.click()
-    ToasterPopupClick()
     logOut()

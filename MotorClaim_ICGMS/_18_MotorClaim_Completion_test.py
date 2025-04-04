@@ -30,7 +30,7 @@ def test_MotorClaim_Complete():
     time.sleep(1)
 
     # Click on Submit Button
-    submit_button = driver.find_element(By.XPATH, "//span[text()='Submit']")
+    submit_button = wait.until(EC.element_to_be_clickable((By.XPATH, "//span[text()='Submit']")))
     submit_button.click()
     ToasterPopupClick()
 

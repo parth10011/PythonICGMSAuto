@@ -26,10 +26,11 @@ def test_MotorClaim_ClaimFinancAlloc():
 
     # Click on Claim Financier needed radio button
     driver.find_element(By.XPATH, "//input[@formcontrolname='is_financier_required' and @value='yes']").click()
+    time.sleep(2)
 
-    financType_dropdown = Select(driver.find_element(By.XPATH, "//select[@formcontrolname='financier_id']"))
-    financType_dropdown.select_by_visible_text("Parth Corporation")
-    # financType_dropdown.select_by_visible_text("Parth Corp")
+    wait.until(EC.presence_of_all_elements_located((By.XPATH, "//select[@formcontrolname='financier_id']/option")))
+    financType_dropdown = Select(wait.until(EC.presence_of_element_located((By.XPATH, "//select[@formcontrolname='financier_id']"))))
+    financType_dropdown.select_by_visible_text("Parth Corp")
 
     # Upload Document File
     document_upload = driver.find_element(By.XPATH, "(//input[@type='file'])[1]")
