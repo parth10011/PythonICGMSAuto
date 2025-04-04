@@ -8,6 +8,7 @@ Repair_Login = PathExcelSheet['Repairer']
 Surveyor_Login = PathExcelSheet['Surveyor']
 Insurer_Login = PathExcelSheet['Insurer_Log']
 MotorClaim_Insurer_Name = PathExcelSheet['MotorClaim_Insurer']
+insurerName = MotorClaim_Insurer_Name.cell(2,1).value
 PreInspection_Type_Name = PathExcelSheet['PreInspection_Type']
 url = "https://release.icgms.sharajman.com/"
 url_Dev = "https://dev.icgms.sharajman.com/"
