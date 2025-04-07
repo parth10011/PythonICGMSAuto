@@ -96,8 +96,9 @@ def test_PreInsp_QC():
     time.sleep(2)
 
     # Download Pre Inspection pdf
-    DownCustReport = wait.until(EC.presence_of_element_located((By.XPATH, "//th[text()='1']/following-sibling::td//i[@ngbtooltip='Download Acknowledged Report']")))
+    DownCustReport = wait.until(EC.presence_of_element_located((By.XPATH, "(//tr[td[text()='Motor Pre Inspection']]/td/div/button/i[@ngbtooltip='Download Acknowledged Report'])[1]")))
     DownCustReport.click()
+    time.sleep(1)
     ToasterPopupClick()
     logOut()
 # test_PreInsp_QC()
