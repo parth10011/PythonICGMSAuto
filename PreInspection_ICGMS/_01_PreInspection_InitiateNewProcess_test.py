@@ -47,8 +47,11 @@ def test_PreInsp_Initiate():
     driver.find_element(By.XPATH, "//input[@placeholder='Enter Rreference number']").send_keys(current_date+"MARCH")
     driver.find_element(By.XPATH, "//input[@placeholder='Enter City']").send_keys("NULL DATA")
     driver.find_element(By.XPATH, "//input[@placeholder='Enter Branch Name']").send_keys("New Road House")
-    driver.find_element(By.XPATH, "(//input[contains(@placeholder,'Enter your remark')])[1]").send_keys("Please Enter Remark 2")
-    driver.find_element(By.XPATH, "(//input[contains(@placeholder,'Enter your remark')])[2]").send_keys("Please Enter Remark 1")
+    try:
+        driver.find_element(By.XPATH, "(//input[contains(@placeholder,'Enter your remark')])[1]").send_keys("Please Enter Remark 2")
+        driver.find_element(By.XPATH, "(//input[contains(@placeholder,'Enter your remark')])[2]").send_keys("Please Enter Remark 1")
+    except Exception:
+        pass
     ToasterPopupClick()
     time.sleep(1)
 

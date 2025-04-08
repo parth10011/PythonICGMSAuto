@@ -34,22 +34,20 @@ def test_UsedCarReport_Initiate():
     branchLoc_input = driver.find_element(By.XPATH, "//input[@formcontrolname='branch']")
     branchLoc_input.send_keys(randomstateCode)
 
-    while True:
-        # Select a random state
-        state_options = driver.find_elements(By.XPATH, "//select[@formcontrolname='state']/option[@value!='']")
-        random.choice(state_options).click()
+    # Select State Dropdown
+    state_dropdown = wait.until(EC.visibility_of_all_elements_located((By.XPATH, "//select[@formcontrolname='state']/option[@value !='']")))
+    random.choice(state_dropdown).click()
+    time.sleep(1)
 
-        try:
-            # Wait for RTO to appear
-            rto_options = wait.until(EC.presence_of_all_elements_located((By.XPATH, "//select[@formcontrolname='rto_Name']/option[@value!='']")))
-            
-            # If RTO are found, select one
-            if rto_options:
-                random.choice(rto_options).click()
-                break  
-        except:
-            # If no RTOs appear, retry with another state
-            continue
+    # Select RTO Dropdown
+    try:
+        rto_dropdown = driver.find_elements(By.XPATH, "//select[@formcontrolname='rto_Name']/option[@value !='']")
+        random.choice(rto_dropdown).click()
+    except Exception :
+        a = wait.until(EC.visibility_of_any_elements_located((By.XPATH, "//select[@formcontrolname='state']/option[@value !='']")))
+        random.choice(a).click()
+        b = wait.until(EC.visibility_of_any_elements_located((By.XPATH, "//select[@formcontrolname='rto_Name']/option[@value !='']")))
+        random.choice(b).click()
 
     # Enter Borrower Name
     borrowName_input = driver.find_element(By.XPATH, "//input[@formcontrolname='borrower_name']")

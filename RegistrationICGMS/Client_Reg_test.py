@@ -349,8 +349,9 @@ def Client_ProdMapping_Input():
     add_button = driver.find_element(By.XPATH, "//button[contains(text(),'Close')]//preceding-sibling::button")
     add_button.click()
     ToasterPopupClick()
-    time.sleep(1)
+    time.sleep(0.3)
     ToasterPopupClick()
+    time.sleep(0.3)
     logOut()
 
 Client_ProdMapping_Input()
