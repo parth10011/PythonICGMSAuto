@@ -12,13 +12,14 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support import expected_conditions as EC
+# from selenium.webdriver.chrome.service import Service
 from Generic.InitiateNewProcess_details import *
-from selenium.webdriver.chrome.service import Service
+# from webdriver_manager.chrome import ChromeDriverManager
 
-chrome_driver_path = r"C:\chromedriver.exe"  # Path to ChromeDriver
+# chrome_driver_path = r"C:\chromedriver.exe"  # Path to ChromeDriver
 options = Options()
-service = Service(chrome_driver_path)
-driver = webdriver.Chrome(service=service, options=options)
+# service = Service(ChromeDriverManager().install())
+driver = webdriver.Chrome(options=options)
 wait = WebDriverWait(driver, 30)
 
 # class Basetest(unittest.TestCase):
